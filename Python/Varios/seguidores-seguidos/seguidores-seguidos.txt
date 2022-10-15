@@ -1,0 +1,2 @@
+Dado un diccionario followers donde las claves son personas y los valores son las personas que los siguen,
+crear un diccionario donde las claves son las mismas personas y los valores son las personas a las que siguen.
