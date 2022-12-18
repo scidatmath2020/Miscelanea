@@ -104,6 +104,9 @@ ggplot() +
         panel.grid = element_blank(),
         axis.title = element_blank(), 
         axis.text = element_blank(), 
-        axis.ticks = element_blank()
+        axis.ticks = element_blank(),
+        plot.title = element_text(face="bold.italic")
   ) +
-  facet_wrap(.~autoridad,ncol=5) 
+  facet_wrap(.~autoridad,ncol=5) +
+  labs(title = "Población de 18 años y más que identifica a las autoridades de seguridad\npública por entidad federativa y tipo de autoridad,\nsegún percepción de corrupción\nmarzo y abril de 2022", 
+       subtitle = "Fuente: ENVIPE 2022, INEGI")
