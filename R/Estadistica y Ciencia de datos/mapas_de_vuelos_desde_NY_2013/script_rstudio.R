@@ -74,7 +74,7 @@ ggplot()+
   scale_fill_gradient(low = "yellow",
                       high = "darkred",
                       na.value = "gray",
-                      name="") +
+                      name="Total de vuelos") +
   geom_polygon(data = new_york_mapa,
                mapping = aes(x=long,y=lat,group=group),
                fill = "red",
@@ -118,7 +118,7 @@ ggplot()+
   scale_fill_gradient(low = "yellow",
                       high = "darkred",
                       na.value = "gray",
-                      name="") +
+                      name="Total de vuelos") +
   geom_point(data = vuelos_continentales,
              mapping = aes(x=lon,y=lat)) +
   geom_curve(mapping = aes(x=aeropuertos_nyc$lon[1],y=aeropuertos_nyc$lat[1],
