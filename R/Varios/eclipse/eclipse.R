@@ -1,6 +1,7 @@
 library(ggplot2)
 library(jpeg)
 library(ggpubr)
+library(gganimate)
 
 ## ruta donde se descarga el archivo sol.jpg
 setwd("C:\\Users\\Usuario\\Documents\\scidata\\miscelanea\\R\\otros\\eclipse")
