@@ -28,7 +28,11 @@ final = do.call(rbind,resultado)
 names(final)[5]="Valores"
 
 p = ggplot(data = final) +
-  geom_polygon(mapping=aes(x=Longitud,y=Latitud,group=Grupo,fill=Valores),color="black") +
+  geom_polygon(mapping=aes(x=Longitud,y=Latitud,group=Grupo,fill=Valores),
+               color=NA) +
+  scale_fill_gradient(low = "darkred",
+                      high = "yellow",
+                      na.value = NA) +
   theme(legend.position="top",
         panel.background = element_rect("#202020"), 
         panel.grid = element_blank(),
@@ -38,10 +42,9 @@ p = ggplot(data = final) +
         plot.title = element_text(face="bold.italic"))
 
 
-
 anim = p + transition_time(año) + labs(title="Año: {frame_time}") 
 
-animate(anim, width = 600, height = 600)
+animate(anim, width = 800, height = 600)
 
 
 
