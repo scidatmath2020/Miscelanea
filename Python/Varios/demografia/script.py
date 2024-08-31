@@ -72,6 +72,31 @@ demografia = (demografia >>
         axis_text=element_blank(),
         axis_title=element_blank()))
 
+################# Mapa de luces
+
+(ggplot() + 
+  geom_polygon(data=mexico,
+             mapping=aes(x="Longitud",y="Latitud",group="Grupo"),
+             color="#505050",
+             fill="#303030",
+             size=0.1) +
+  geom_point(data=demografia,
+             mapping=aes(x="LONGITUD_DECIMAL",y="LATITUD_DECIMAL",
+                         alpha="poblacion_relativa"),
+             color = "#E69F00",
+             shape = "+",
+             size=0.000000001) +
+  geom_polygon(data=mexico,
+             mapping=aes(x="Longitud",y="Latitud",group="Grupo"),
+             color="#505050",
+             fill=None,
+             size=0.1) +
+   theme(legend_position = "none",
+        panel_background=element_rect(fill="#202020"),
+        axis_ticks=element_blank(),
+        axis_text=element_blank(),
+        axis_title=element_blank(),
+        panel_grid=element_blank()))
 
 
 
