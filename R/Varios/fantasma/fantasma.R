@@ -12,16 +12,11 @@ mis_iris = function(t){
     return(data.frame(x=c(-1+0.3*cos(t),1+0.3*cos(t)),y=c(0.075,0.075),tiempo=t))
 }
 
-IRIS_1 = lapply(seq(pi,2*pi,0.01),mis_iris)
-IRIS_1 = do.call(rbind,IRIS_1)
+IRIS = lapply(seq(pi,3*pi,0.01),mis_iris)
+IRIS = do.call(rbind,IRIS)
 
-IRIS_2 = lapply(seq(2*pi,3*pi,0.01),mis_iris)
-IRIS_2 = do.call(rbind,IRIS_2)
-
-IRIS = rbind(IRIS_1,IRIS_2)
-
-gaussiana = data.frame(x=c(9,-8.5),y=c(0.09,0.09),texto=c(r"($f_X(x)=\frac{1}{4\sqrt{\pi}}e^{-x^2/32}$)",r"($X\sim N(\mu=0,sd=4)$)"))
-
+gaussiana = data.frame(x=c(9,-8.5),y=c(0.09,0.09),
+                       texto=c(r"($f_X(x)=\frac{1}{4\sqrt{2\pi}}e^{-x^2/32}$)",r"($X\sim N(\mu=0,sd=4)$)"))
 
 animacion = ggplot() +
   annotation_custom(rasterGrob(colorRampPalette(c("black", "white"))(100), 
