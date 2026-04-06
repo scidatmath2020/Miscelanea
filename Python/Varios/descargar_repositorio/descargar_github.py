@@ -19,7 +19,7 @@ url_github = "https://github.com/scidatmath2020/"
 
 ### lugar en tu computadora donde vas a descargar
 
-ruta_local = r""
+ruta_local = r"C:\Users\Usuario\Documents\scidata\26_AL_Li" + "\data"
 
 ###############################################################################
 ###############################################################################
