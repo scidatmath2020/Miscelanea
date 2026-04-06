@@ -29,8 +29,8 @@ from openpyxl.utils import get_column_letter
 
 # ==================== CONFIGURACIÓN ====================
 
-nombre_archivo = 'darth_vader.jpg'
-ruta = r'C:\Users\Usuario\Documents\scidata\26_AL_Li\practicas\darth_vader'
+nombre_archivo = ''
+ruta = r''
 
 ###############################################################################
 ###############################################################################
