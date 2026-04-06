@@ -29,7 +29,7 @@ from openpyxl.utils import get_column_letter
 
 # ==================== CONFIGURACIÓN ====================
 
-nombre_archivo = ''
+nombre_archivo = '.jpg'
 ruta = r''
 
 ###############################################################################
